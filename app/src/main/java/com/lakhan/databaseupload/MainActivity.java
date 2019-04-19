@@ -810,6 +810,7 @@ ProgressDialog pd;
                                         ArrayAdapter<CharSequence> Typead = ArrayAdapter.createFromResource(getApplicationContext(),
                                                 R.array.subtype,R.layout.spinner_item);
 
+
                                         Typead.setDropDownViewResource(R.layout.spinner_dropdown);
                                         type.setAdapter(Typead);
                                         type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
