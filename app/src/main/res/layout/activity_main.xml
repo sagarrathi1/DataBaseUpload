@@ -53,8 +53,8 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="170dp"
-                    android:layout_height="120dp"
+                    android:layout_width="78dp"
+                    android:layout_height="117dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="0dp"
@@ -62,6 +62,36 @@
                     android:onClick="select"
                     app:srcCompat="@android:drawable/btn_star_big_on" />
 
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="78dp"
+                    android:layout_height="117dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:onClick="select1"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="78dp"
+                    android:layout_height="117dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/imageView1"
+                    android:onClick="select2"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="78dp"
+                    android:layout_height="117dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_marginTop="0dp"
+                    android:onClick="select3"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
 
                 <EditText
                     android:id="@+id/fees"
@@ -112,7 +142,7 @@
                     android:id="@+id/emergency"
                     android:layout_width="400dp"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/time"
+                    android:layout_below="@+id/location"
                     android:layout_alignParentStart="true"
                     android:layout_marginTop="15dp"
                     android:ems="10"
@@ -123,7 +153,7 @@
                     android:id="@+id/savebutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/location"
+                    android:layout_below="@+id/DiscountPrice"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="12dp"
                     android:layout_marginLeft="50dp"
@@ -135,11 +165,131 @@
                     android:id="@+id/location"
                     android:layout_width="400dp"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/emergency"
+                    android:layout_below="@+id/time"
                     android:layout_alignParentStart="true"
                     android:ems="10"
                     android:hint="sold by"
                     android:inputType="textPersonName" />
+
+
+
+                <EditText
+                    android:id="@+id/color"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/emergency"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Colour"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/Type"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/color"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Type"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/FinishType"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/Type"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Finish Type"
+                    android:inputType="textPersonName" />
+
+
+                <EditText
+                    android:id="@+id/Size"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/FinishType"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Size"
+                    android:inputType="textPersonName" />
+
+
+                <EditText
+                    android:id="@+id/Description"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/Size"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:inputType="textPersonName" />
+
+
+
+                <EditText
+                    android:id="@+id/Material"
+                    android:layout_width="400dp"
+                    android:layout_height="51dp"
+                    android:layout_below="@+id/Description"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Material"
+                    android:inputType="textPersonName" />
+
+
+
+
+
+
+
+
+
+                <EditText
+                    android:id="@+id/DelivaryTime"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/Material"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Delivary Time"
+                    android:inputType="textPersonName" />
+
+
+                <EditText
+                    android:id="@+id/DelivaryCharge"
+                    android:layout_width="400dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/DelivaryTime"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Delivary Charge"
+                    android:inputType="textPersonName" />
+
+
+
+                <EditText
+                    android:id="@+id/DiscountPrice"
+                    android:layout_width="400dp"
+                    android:layout_height="51dp"
+                    android:layout_below="@+id/DelivaryCharge"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Discount Price"
+                    android:inputType="textPersonName" />
+
+
+
+
 
                 <Spinner
                     android:id="@+id/mainspinner"

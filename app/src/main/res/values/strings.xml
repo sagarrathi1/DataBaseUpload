@@ -225,7 +225,7 @@
         <item>Waste Debris (Malba)</item>
         <item>Stone (Giti)</item>
         <item>Brick</item>
-        <!--<item></item>-->
+        <item>Tile</item>
         <!--<item></item>-->
 
     </string-array>
@@ -253,6 +253,63 @@
 
     </string-array>
 
+    <string-array name="Tile">
+        <item>Select</item>
+
+        <item>Floor Tile</item>
+        <item>Kitchen Tile</item>
+        <item>Lat_Bath</item>
+        <item>Parking Tile</item>
+        <item>Mosaic Tile</item>
+        <item>Marley Morden Roof Tile</item>
+        <item>Elevation Wall Tile (Dholpuri Tile)</item>
+        <item>Granite</item>
+        <item>Paver Block</item>
+        <item>Marble</item>
+        <item>Kadapa</item>
+        <item>Cement Frame </item>
+
+
+    </string-array>
+
+
+    <string-array name="TileType">
+        <item>Select</item>
+
+        <item>Vitrified Tile</item>
+        <item>Ceramic Tile</item>
+        <item>White Marble</item>
+        <item>Green Marble</item>
+        <!--<item></item>-->
+        <!--<item></item>-->
+
+    </string-array>
+
+
+
+    <string-array name="TileSize">
+        <item>Select</item>
+
+        <item>2ft x 2ft</item>
+        <item>32 inch x 32 inch</item>
+        <item>13" x 13"</item>
+        <item>8" x 10"</item>
+        <item>16" x 16"</item>
+        <item>8" x 12"</item>
+        <item>12" x 12"</item>
+        <item>10" x 10"</item>
+        <item>16" x 16"</item>
+        <item>24" x 24"</item>
+        <item>8" x 12"</item>
+        <item>8" x 24"</item>
+        <item>12" x 18"</item>
+        <item>10" x 18"</item>
+        <item>12" x 24"</item>
+        <item>12" x 36"</item>
+        <item>24" x 24"</item>
+        <!--<item></item>-->
+
+    </string-array>
 
 
 
@@ -849,6 +906,35 @@
 
         <item>Century</item>
         <item>Merino</item>
+    </string-array>
+
+    <string-array name="micasize">
+
+        <item>Select</item>
+        <item>0_8 mm</item>
+        <item>1 mm</item>
+
+    </string-array>
+    <string-array name="micadimen">
+
+        <item>8 X 4 Foot</item>
+        <!--<item>0.8 mm</item>-->
+        <!--<item>1 mm</item>/-->
+
+    </string-array>
+
+    <string-array name="handelsize">
+        <item>Select</item>
+        <item>96mm</item>
+        <item>128mm</item>
+        <item>160mm</item>
+        <item>224mm</item>
+        <item>288mm</item>
+        <item>300mm</item>
+        <item>320mm</item>
+        <item>450mm</item>
+
+
     </string-array>
 
 <string-array name="Plywood">

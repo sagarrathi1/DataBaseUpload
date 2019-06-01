@@ -35,23 +35,24 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
 
-    private EditText  fees, eme, cont, time, lo, cate,fname;
-    private ImageView pic;
+    private EditText  fees, eme, cont, time, lo, cate,fname,color,stype,finishtype,material,size,descrip,delChar,delTime,discount;
+    private ImageView pic,pic1,pic2,pic3;
 //    private DatabaseHandler db;
 ProgressDialog pd;
     private ProgressDialog mprogress;
-    private String f_name, f_rate, f_fees, f_pri, f_eme, f_cont, f_time, f_lo, f_cate;
+    private String f_name = "None" , f_rate, f_fees=  "None", f_pri, f_eme = "None", f_cont = "None", f_time = "None", f_lo = "None", f_cate = "None",f_color = "None",f_stype = "None",f_finishtype = "None",f_size = "None",f_description = "None",f_material = "None";
     FirebaseDatabase mydata;
     DatabaseReference myref;
     StorageReference mStorageRef;
     private StorageReference mImageStorage;
-    Uri choosenImage;
+    Uri choosenImage,choosenImage1,choosenImage2,choosenImage3;
     private DatabaseReference mdatabase,mdata;
-    HashMap<String,String> usermap;
-    private Bitmap bp;
+    HashMap<String,String> usermap,smap;
+    private Bitmap bp1,bp2,bp3,bp;
     Spinner main,sub,brand,type,product,subtype,onemore;
     String f_main,f_sub,f_brand,f_type,f_subtype,f_onemore;
-    StorageReference filepath;
+    StorageReference filepath,filepath1,filepath2,filepath3;
+    private String f_delChr = "None" , f_delTime = "None", f_discount=  "None";
 
 
     @Override
@@ -67,6 +68,14 @@ ProgressDialog pd;
 
 
         pic = (ImageView) findViewById(R.id.imageView);
+
+        pic1 = (ImageView) findViewById(R.id.imageView1);
+        pic2 = (ImageView) findViewById(R.id.imageView2);
+        pic3 = (ImageView) findViewById(R.id.imageView3);
+
+
+
+
         fname = (EditText) findViewById(R.id.fname);
         fees = (EditText) findViewById(R.id.fees);   //item code
 //        pri = (EditText) findViewById(R.id.pri);
@@ -76,6 +85,21 @@ ProgressDialog pd;
         cont = (EditText) findViewById(R.id.contact); // catalouge code
         lo = (EditText) findViewById(R.id.location); // sold by
         cate = (EditText) findViewById(R.id.cate); // rc code
+
+
+        color = (EditText) findViewById(R.id.color); // rc code
+        stype = (EditText) findViewById(R.id.Type); // rc code
+        finishtype = (EditText) findViewById(R.id.FinishType); // rc code
+        material = (EditText) findViewById(R.id.Material); // rc code
+        size = (EditText) findViewById(R.id.Size); // rc code
+        descrip = (EditText) findViewById(R.id.Description); // rc code
+
+        delChar = (EditText) findViewById(R.id.DelivaryCharge); // rc code
+        delTime = (EditText) findViewById(R.id.DelivaryTime); // rc code
+        discount = (EditText) findViewById(R.id.DiscountPrice); // rc code
+
+
+
 
         main = (Spinner)findViewById(R.id.mainspinner);
         sub = (Spinner)findViewById(R.id.subspinner);
@@ -181,6 +205,40 @@ ProgressDialog pd;
                                         if (i==7) setProduct("HARDWARE","KEY HOLDER");
                                         if(i==8) setProduct("HARDWARE","PATCH FITTING SERIES");
                                         if(i==9) setProduct("HARDWARE","RIM LOCK SERIES");
+                                        if (i==5){
+
+                                            ArrayAdapter<CharSequence> Typead = ArrayAdapter.createFromResource(getApplicationContext(),
+                                                    R.array.handelsize,R.layout.spinner_item);
+
+                                            Typead.setDropDownViewResource(R.layout.spinner_dropdown);
+                                            type.setAdapter(Typead);
+                                            type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                                @Override
+                                                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                                                    if (i==1) setProduct("Handles","96MM");
+                                                    if (i==2) setProduct("Handles","128MM");
+                                                    if (i==3) setProduct("Handles","160MM");
+                                                    if (i==4) setProduct("Handles","224MM");
+                                                    if (i==5) setProduct("Handles","288MM");
+                                                    if (i==6) setProduct("Handles","300MM");
+                                                    if (i==7) setProduct("Handles","320MM");
+                                                    if (i==8) setProduct("Handles","450MM");
+
+
+                                                }
+
+                                                @Override
+                                                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                                }
+                                            });
+
+
+
+
+
+                                        }
 
                                         if (i==6){
 //                                            ArrayAdapter<CharSequence> Typead = ArrayAdapter.createFromResource(getApplicationContext(),
@@ -291,6 +349,27 @@ ProgressDialog pd;
 
                                         if (i==1)setProduct("MICA","HERITAGE");
                                         if (i==3) setProduct("MICA","MERINO");
+
+                                        ArrayAdapter<CharSequence> Typead = ArrayAdapter.createFromResource(getApplicationContext(),
+                                                R.array.micasize,R.layout.spinner_item);
+
+                                        Typead.setDropDownViewResource(R.layout.spinner_dropdown);
+                                        type.setAdapter(Typead);
+                                        type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                            @Override
+                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                ArrayAdapter<CharSequence> subtypead = ArrayAdapter.createFromResource(getApplicationContext(),
+                                                        R.array.micadimen,R.layout.spinner_item);
+
+                                                subtypead.setDropDownViewResource(R.layout.spinner_dropdown);
+                                                subtype.setAdapter(subtypead);
+                                            }
+
+                                            @Override
+                                            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                            }
+                                        });
 
                                     }
 
@@ -510,6 +589,49 @@ ProgressDialog pd;
 
 
                             }
+
+                            if (i==8){
+                                ArrayAdapter<CharSequence> brandad = ArrayAdapter.createFromResource(getApplicationContext(),
+                                        R.array.Tile,R.layout.spinner_item);
+
+                                brandad.setDropDownViewResource(R.layout.spinner_dropdown);
+                                brand.setAdapter(brandad);
+                                brand.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                        ArrayAdapter<CharSequence> Typead = ArrayAdapter.createFromResource(getApplicationContext(),
+                                                R.array.TileType,R.layout.spinner_item);
+
+                                        Typead.setDropDownViewResource(R.layout.spinner_dropdown);
+                                        type.setAdapter(Typead);
+                                        type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                            @Override
+                                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                                                ArrayAdapter<CharSequence> subtypead = ArrayAdapter.createFromResource(getApplicationContext(),
+                                                        R.array.TileSize,R.layout.spinner_item);
+
+                                                subtypead.setDropDownViewResource(R.layout.spinner_dropdown);
+                                                subtype.setAdapter(subtypead);
+
+                                            }
+
+                                            @Override
+                                            public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                            }
+                                        });
+
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                                    }
+                                });
+
+                            }
+
+
                         }
 
                         @Override
@@ -1336,21 +1458,37 @@ ProgressDialog pd;
 
                 mdatabase = FirebaseDatabase.getInstance().getReference().child("Final_Data").child(f_main).child(f_sub).child(f_cate);
                 filepath = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_cate + ".jpg");
+                filepath1 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_cate + "1.jpg");
+                filepath2 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_cate + "2.jpg");
+                filepath3 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_cate + "3.jpg");
 
             }else {
                 if (f_type.equals("None")) {
                     mdatabase = FirebaseDatabase.getInstance().getReference().child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_cate);
                     filepath = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_cate + ".jpg");
+                    filepath1 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_cate + "1.jpg");
+                    filepath2 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_cate + "2.jpg");
+                    filepath3 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_cate + "3.jpg");
 
                 }else{
                     if (f_subtype.equals("None")) {
                         mdatabase = FirebaseDatabase.getInstance().getReference().child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_cate);
+
+
                         filepath = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_cate + ".jpg");
+                        filepath1 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_cate + "1.jpg");
+                        filepath2 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_cate + "2.jpg");
+                        filepath3 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_cate + "3.jpg");
+
                     }else {
 
 //                        if (f_onemore.equals("None")) {
                             mdatabase = FirebaseDatabase.getInstance().getReference().child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_cate);
                             filepath = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_cate + ".jpg");
+                        filepath1 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_cate + "1.jpg");
+                        filepath2 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_cate + "2.jpg");
+                        filepath3 = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_cate + "3.jpg");
+
 //                        }else {
 //                            mdatabase = FirebaseDatabase.getInstance().getReference().child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_onemore).child(f_cate);
 //                            filepath = mImageStorage.child("Final_Data").child(f_main).child(f_sub).child(f_brand).child(f_type).child(f_subtype).child(f_onemore).child(f_cate + ".jpg");
@@ -1366,8 +1504,19 @@ ProgressDialog pd;
             usermap.put("Item_Price",f_time);
             usermap.put("Item_Sold_By",f_lo);
             usermap.put("Item_Name",f_name);
+            usermap.put("Item_Delivary_Charge",f_delChr);
+            usermap.put("Item_Delivery_Time",f_delTime);
+            usermap.put("Item_Discount_Price",f_discount);
 
 
+            myref = mdatabase.child("Item_Specification");
+            smap = new HashMap<String, String>();
+            smap.put("Colour",f_color);
+            smap.put("Material",f_material);
+            smap.put("Size",f_size);
+            smap.put("Description",f_description);
+            smap.put("Type",f_stype);
+            smap.put("Finish Type",f_finishtype);
 
             try {
 
@@ -1394,15 +1543,273 @@ ProgressDialog pd;
 
                                     String imagePath = uri.toString();
                                     usermap.put("Item_Image",imagePath);
-                                    mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-                                            mprogress.dismiss();
+                                    if (choosenImage1!=null){
+
+                                        filepath1.putFile(choosenImage1).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+
+                                                if (task.isSuccessful()){
+
+                                                    filepath1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                        @Override
+                                                        public void onSuccess(Uri uri) {
+                                                            String imagePath1 = uri.toString();
+                                                            usermap.put("Item_Image1",imagePath1);
+
+
+                                                            if (choosenImage2!=null){
+
+                                                                filepath2.putFile(choosenImage2).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+
+                                                                        if (task.isSuccessful()){
+
+                                                                            filepath2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                @Override
+                                                                                public void onSuccess(Uri uri) {
+                                                                                    String imagePath2 = uri.toString();
+                                                                                    usermap.put("Item_Image2",imagePath2);
+
+
+
+                                                                                    if (choosenImage3!=null){
+
+                                                                                        filepath2.putFile(choosenImage3).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                                                                            @Override
+                                                                                            public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+
+                                                                                                if (task.isSuccessful()){
+
+                                                                                                    filepath2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                                                        @Override
+                                                                                                        public void onSuccess(Uri uri) {
+                                                                                                            String imagePath3 = uri.toString();
+                                                                                                            usermap.put("Item_Image3",imagePath3);
+
+
 //
-                                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+                                                                                                            mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                                @Override
+                                                                                                                public void onSuccess(Void aVoid) {
+                                                                                                                    myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                                        @Override
+                                                                                                                        public void onSuccess(Void aVoid) {
+                                                                                                                            mprogress.dismiss();
+
+                                                                                                                        }
+                                                                                                                    });
+                                                                                                                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+
+                                                                                                                }
+                                                                                                            });
 //
-                                        }
-                                    });
+                                                                                                        }
+                                                                                                    });
+                                                                                                }
+
+                                                                                            }
+                                                                                        }) ;
+                                                                                    }else {
+
+//                                        mprogress.dismiss();
+///
+                                                                                        mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                            @Override
+                                                                                            public void onSuccess(Void aVoid) {
+                                                                                                myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                                    @Override
+                                                                                                    public void onSuccess(Void aVoid) {
+                                                                                                        mprogress.dismiss();
+
+                                                                                                    }
+                                                                                                });
+                                                                                                Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+
+                                                                                            }
+                                                                                        });
+                                                                                    }
+
+
+                                                                                }
+                                                                            });
+                                                                        }
+
+                                                                    }
+                                                                }) ;
+                                                            }else {
+
+                                                                mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                    @Override
+                                                                    public void onSuccess(Void aVoid) {
+                                                                        myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                            @Override
+                                                                            public void onSuccess(Void aVoid) {
+                                                                                mprogress.dismiss();
+
+                                                                            }
+                                                                        });
+                                                                        Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+
+                                                                    }
+                                                                });
+                                                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//                                                            mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                                @Override
+//                                                                public void onSuccess(Void aVoid) {
+//                                                                    myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                                        @Override
+//                                                                        public void onSuccess(Void aVoid) {
+//                                                                            mprogress.dismiss();
+//
+//                                                                        }
+//                                                                    });
+//                                                                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+//
+//                                                                }
+//                                                            });
+////                                                            mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                                @Override
+//                                                                public void onSuccess(Void aVoid) {
+//                                                                    myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                                        @Override
+//                                                                        public void onSuccess(Void aVoid) {
+//                                                                            mprogress.dismiss();
+//
+//                                                                        }
+//                                                                    });
+//                                                                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+//
+//                                                                }
+//                                                            });
+                                                        }
+                                                    });
+                                                }
+
+                                            }
+                                        }) ;
+                                    }else {
+
+//                                        mprogress.dismiss();
+                                        mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void aVoid) {
+                                                myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        mprogress.dismiss();
+
+                                                    }
+                                                });
+                                                Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+
+                                            }
+                                        });
+                                    }
+
+
+
+
+
+//
+//                                    mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                        @Override
+//                                        public void onSuccess(Void aVoid) {
+//                                            myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                @Override
+//                                                public void onSuccess(Void aVoid) {
+////                                                    mprogress.dismiss();
+////                                                    if (choosenImage1!=null){
+////
+////                                                      filepath1.putFile(choosenImage1).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+////                                                          @Override
+////                                                          public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+////
+////                                                              if (task.isSuccessful()){
+////
+////                                                                  filepath1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+////                                                                      @Override
+////                                                                      public void onSuccess(Uri uri) {
+////                                                                          String imagePath1 = uri.toString();
+////                                                                          usermap.put("Item_Image1",imagePath1);
+////
+////                                                                          mdatabase.setValue(usermap).addOnSuccessListener(new OnSuccessListener<Void>() {
+////                                                                              @Override
+////                                                                              public void onSuccess(Void aVoid) {
+////                                                                                  myref.setValue(smap).addOnSuccessListener(new OnSuccessListener<Void>() {
+////                                                                                      @Override
+////                                                                                      public void onSuccess(Void aVoid) {
+////                                                                                          mprogress.dismiss();
+////
+////                                                                                      }
+////                                                                                  });
+////                                                                              }
+////                                                                          });
+////                                                                      }
+////                                                                  });
+////                                                              }
+////
+////                                                          }
+////                                                      }) ;
+////                                                    }else {
+////
+////                                                                                                            mprogress.dismiss();
+////
+////                                                    }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//                                                }
+//                                            });
+////
+//                                    Toast.makeText(getApplicationContext(),"Success",Toast.LENGTH_LONG).show();
+////
+//                                        }
+//                                    });
 
 
 
@@ -1461,19 +1868,46 @@ ProgressDialog pd;
     }
 
     public void select(View view){
+        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, 0);
 
-        selectImage();
+//        selectImage();
     }
-    public void selectImage() {
+    public void select1(View view){
+        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, 1);
+
+//        selectImage();
+    }
+
+    public void select2(View view){
         Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
         photoPickerIntent.setType("image/*");
         startActivityForResult(photoPickerIntent, 2);
+
+//        selectImage();
     }
+
+    public void select3(View view){
+        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        photoPickerIntent.setType("image/*");
+        startActivityForResult(photoPickerIntent, 3);
+
+//        selectImage();
+    }
+
+//    public void selectImage() {
+//        Intent photoPickerIntent = new Intent(Intent.ACTION_GET_CONTENT);
+//        photoPickerIntent.setType("image/*");
+//        startActivityForResult(photoPickerIntent, 0);
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case 2:
+            case 0:
                 if (resultCode == RESULT_OK) {
                     choosenImage = data.getData();
                     bp = decodeUri(choosenImage, 400);
@@ -1482,6 +1916,40 @@ ProgressDialog pd;
 //                    pic.setImageBitmap(BitmapFactory.decodeFile(choosenImage.toString()));
 
                 }
+                break;
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    choosenImage1 = data.getData();
+                    bp1 = decodeUri(choosenImage, 400);
+                    pic1.setImageBitmap(bp1);
+
+//                    pic.setImageBitmap(BitmapFactory.decodeFile(choosenImage.toString()));
+
+                }
+                break;
+
+            case 2:
+                if (resultCode == RESULT_OK) {
+                    choosenImage2 = data.getData();
+                    bp2 = decodeUri(choosenImage, 400);
+                    pic2.setImageBitmap(bp2);
+
+//                    pic.setImageBitmap(BitmapFactory.decodeFile(choosenImage.toString()));
+
+                }
+
+                break;
+            case 3:
+                if (resultCode == RESULT_OK) {
+                    choosenImage3 = data.getData();
+                    bp3 = decodeUri(choosenImage, 400);
+                    pic3.setImageBitmap(bp3);
+
+//                    pic.setImageBitmap(BitmapFactory.decodeFile(choosenImage.toString()));
+
+                }
+
+                break;
         }
     }
 
@@ -1534,9 +2002,30 @@ ProgressDialog pd;
         f_lo = lo.getText().toString();
         f_cont = cont.getText().toString();
 
+        f_size = size.getText().toString();
+        f_description = descrip.getText().toString();
+        f_color = color.getText().toString();
+        f_stype=stype.getText().toString();
+        f_finishtype=finishtype.getText().toString();
+        f_material=material.getText().toString();
+
+
+        f_delChr = delChar.getText().toString();
+        f_delTime = delTime.getText().toString();
+        f_discount = discount.getText().toString();
+
         f_type = type.getSelectedItem().toString();
+        if (f_type.equals("Select"))
+            f_type = "None";
+
         f_subtype = subtype.getSelectedItem().toString();
+        if (f_subtype.equals("Select"))
+            f_subtype = "None";
+
         f_onemore = onemore.getSelectedItem().toString();
+        if (f_onemore.equals("Select"))
+            f_onemore = "None";
+
 
 
         f_main = main.getSelectedItem().toString();
@@ -1547,11 +2036,13 @@ ProgressDialog pd;
             f_sub = sub.getSelectedItem().toString();
             if (f_sub.equals("Select")) {
                 ok = false;
+                f_sub = "None";
             }else {
 
                 f_brand = brand.getSelectedItem().toString();
                 if (f_brand.equals("Select")) {
                     ok = false;
+                    f_brand = "None";
                 }
             }
         }
