@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@android:color/background_light">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light">
+
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="2 "
+            android:visibility="gone"
+            card_view:layout_constraintStart_toEndOf="@+id/QuntityTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardCompanyText" />
+
+        <LinearLayout
+            android:id="@+id/wishorremove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardImageView">
+
+            <Button
+                android:id="@+id/cartItemRemoveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:text="Remove" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/colorPrimary" />
+
+
+            <Button
+                android:id="@+id/cartMoveToWishlistButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/background_light"
+                android:text="Move to wishlist"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/leftUnitText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="Only 7 unit(s) in stock"
+            android:visibility="gone"
+            card_view:layout_constraintStart_toEndOf="@+id/cardImageView"
+            card_view:layout_constraintTop_toBottomOf="@+id/Quantityspinner" />
+
+        <Spinner
+            android:id="@+id/Quantityspinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/QuntityTextView"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardCompanyText" />
+
+        <TextView
+            android:id="@+id/QuntityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="Quantity:"
+            card_view:layout_constraintStart_toEndOf="@+id/cardImageView"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardCompanyText" />
+
+        <TextView
+            android:id="@+id/cardDiscountPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="Rs.2500"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@+id/cardImageView"
+            card_view:layout_constraintStart_toStartOf="@+id/leftUnitText"
+            card_view:layout_constraintTop_toBottomOf="@+id/leftUnitText" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:maxLines="1"
+            android:text="Lakhan Rathi fghjkl fghjk"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/cardImageView"
+            card_view:layout_constraintTop_toTopOf="@+id/cardImageView" />
+
+        <TextView
+            android:id="@+id/cardCompanyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textSize="13sp"
+            card_view:layout_constraintStart_toEndOf="@+id/cardImageView"
+            card_view:layout_constraintTop_toBottomOf="@+id/cardName" />
+
+        <TextView
+            android:id="@+id/cardOriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="3dp"
+            android:text="Rs.2800"
+            android:textSize="13sp"
+            card_view:layout_constraintStart_toEndOf="@+id/cardDiscountPrice"
+            card_view:layout_constraintTop_toBottomOf="@+id/leftUnitText" />
+
+        <TextView
+            android:id="@+id/cardDiscountPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="3dp"
+            android:text="20% Off"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="12sp"
+            card_view:layout_constraintStart_toEndOf="@+id/cardOriginalPrice"
+            card_view:layout_constraintTop_toBottomOf="@+id/leftUnitText" />
+
+        <ImageView
+            android:id="@+id/cardImageView"
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+             />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
