@@ -30,7 +30,8 @@ public class Main2Activity extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(),Order.class);
+                startActivity(intent);
             }
         });
 
