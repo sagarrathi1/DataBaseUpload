@@ -17,93 +17,88 @@
     </string-array>
 
 
-
-
-
     <string-array name="None">
 
-    <item>None</item>
+        <item>None</item>
 
     </string-array>
 
 
-<!--Electric-->
-
-
+    <!--Electric-->
 
 
     <string-array name="Electric">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Wire</item>
-<item>Switch</item>
-<item>Pannel Light</item>
-<item>COB</item>
-<item>Spot Lght</item>
-<item>Fan</item>
-<item>Pipe</item>
-<item>Flexible Pipe</item>
-<item>Tape</item>
-<item>Shodel</item>
-<item>Plate</item>
-<item>Steel Plate</item>
+        <item>Wire</item>
+        <item>Switch</item>
+        <item>Pannel Light</item>
+        <item>COB</item>
+        <item>Spot Lght</item>
+        <item>Fan</item>
+        <item>Pipe</item>
+        <item>Flexible Pipe</item>
+        <item>Tape</item>
+        <item>Shodel</item>
+        <item>Plate</item>
+        <item>Steel Plate</item>
         <item>Socket</item>
 
-</string-array>
+    </string-array>
     <string-array name="Wire">
 
-    <item>Select</item>
+        <item>Select</item>
 
-<item>RR</item>
-<item>Polycab</item>
-<item>Grate White</item>
-</string-array>
+        <item>RR</item>
+        <item>Polycab</item>
+        <item>Grate White</item>
+    </string-array>
     <string-array name="Switch_Socket">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>RR</item>
-<item>Polycab</item>
-<item>Grate White</item>
-<item>Anchor</item>
+        <item>RR</item>
+        <item>Polycab</item>
+        <item>Grate White</item>
+        <item>Anchor</item>
 
-</string-array>
+    </string-array>
     <string-array name="Pannel_Light">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Orient</item>
-<item>Surya</item>
-<item>Nexes</item>
+        <item>Orient</item>
+        <item>Surya</item>
+        <item>Nexes</item>
 
-</string-array>
+    </string-array>
     <string-array name="COB">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Orient</item>
-<item>Surya</item>
-<item>Nexes</item>
+        <item>Orient</item>
+        <item>Surya</item>
+        <item>Nexes</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="Spot_Light">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Orient</item>
-<item>Surya</item>
-<item>Nexes</item>
+        <item>Orient</item>
+        <item>Surya</item>
+        <item>Nexes</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="Fan">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Orient</item>
-<item>Usha</item>
-<item>Bajaj</item>
-<item>Crompton Greaves</item>
-<item>Havells</item>
+        <item>Orient</item>
+        <item>Usha</item>
+        <item>Bajaj</item>
+        <item>Crompton Greaves</item>
+        <item>Havells</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="Pipe">
 
         <item>15mm</item>
@@ -126,58 +121,58 @@
 
     </string-array>
     <string-array name="Plate">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>Anchor</item>
-<item>RR</item>
-<item>Grate White</item>
+        <item>Anchor</item>
+        <item>RR</item>
+        <item>Grate White</item>
 
-</string-array>
+    </string-array>
     <string-array name="Anchor">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>2 Module</item>
-<item>4 Module</item>
-<item>6 Module</item>
-<item>8 Module</item>
-<item>12 Module</item>
-<item>16 Module</item>
-<item>18 Module</item>
-<item>20 Module</item>
-<item>24 Module</item>
+        <item>2 Module</item>
+        <item>4 Module</item>
+        <item>6 Module</item>
+        <item>8 Module</item>
+        <item>12 Module</item>
+        <item>16 Module</item>
+        <item>18 Module</item>
+        <item>20 Module</item>
+        <item>24 Module</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="RR">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>2 Module</item>
-<item>4 Module</item>
-<item>6 Module</item>
-<item>8 Module</item>
-<item>12 Module</item>
-<item>16 Module</item>
-<item>18 Module</item>
-<item>20 Module</item>
-<item>24 Module</item>
+        <item>2 Module</item>
+        <item>4 Module</item>
+        <item>6 Module</item>
+        <item>8 Module</item>
+        <item>12 Module</item>
+        <item>16 Module</item>
+        <item>18 Module</item>
+        <item>20 Module</item>
+        <item>24 Module</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="Grate_White">
-    <item>Select</item>
+        <item>Select</item>
 
-<item>2 Module</item>
-<item>4 Module</item>
-<item>6 Module</item>
-<item>8 Module</item>
-<item>12 Module</item>
-<item>16 Module</item>
-<item>18 Module</item>
-<item>20 Module</item>
-<item>24 Module</item>
+        <item>2 Module</item>
+        <item>4 Module</item>
+        <item>6 Module</item>
+        <item>8 Module</item>
+        <item>12 Module</item>
+        <item>16 Module</item>
+        <item>18 Module</item>
+        <item>20 Module</item>
+        <item>24 Module</item>
 
 
-</string-array>
+    </string-array>
     <string-array name="Steel_Plate">
         <item>Select</item>
 
@@ -196,21 +191,13 @@
 
 
     <!--Electric End here-->
-    
-    
-    
-    
-<!--<string-array name="Electric">-->
-
-<!--<item></item>-->
-
-<!--</string-array>-->
 
 
+    <!--<string-array name="Electric">-->
 
+    <!--<item></item>-->
 
-
-
+    <!--</string-array>-->
 
 
     <!--Construction Materials-->
@@ -231,7 +218,6 @@
     </string-array>
 
 
-
     <string-array name="Cement">
         <item>Select</item>
 
@@ -245,11 +231,10 @@
     </string-array>
 
 
-
     <string-array name="Steel">
         <item>Select</item>
 
-    <item></item>
+        <item></item>
 
     </string-array>
 
@@ -286,7 +271,6 @@
     </string-array>
 
 
-
     <string-array name="TileSize">
         <item>Select</item>
 
@@ -312,7 +296,6 @@
     </string-array>
 
 
-
     <string-array name="Sand">
         <item>Select</item>
 
@@ -320,46 +303,42 @@
         <item>Crush Sand</item>
         <item>Khanan</item>
         <item>Dust</item>
-                
+
 
     </string-array>
-
 
 
     <string-array name="Murum">
         <item>Select</item>
 
-    <item>Hard Murum</item>
-    <item>Soft Murum</item>
+        <item>Hard Murum</item>
+        <item>Soft Murum</item>
 
     </string-array>
-
 
 
     <string-array name="Waste_Debris_Malba">
         <item>Select</item>
 
-    <item></item>
+        <item></item>
 
     </string-array>
-
 
 
     <string-array name="Stone_Giti">
         <item>Select</item>
 
 
-    <item>10mm</item>
-    <item>1/2</item>
-    <item>3/4</item>
+        <item>10mm</item>
+        <item>1/2</item>
+        <item>3/4</item>
 
     </string-array>
 
 
-
     <string-array name="Brick">
 
-    <!--<item></item>-->
+        <!--<item></item>-->
         <item>Select</item>
 
         <item>Clay Brick</item>
@@ -369,114 +348,87 @@
     </string-array>
 
 
-<string-array name="Clay_Brick">
+    <string-array name="Clay_Brick">
 
-<item>190mmx90mmx90mm</item>
-<item>200mmx100mmx100mm</item>
+        <item>190mmx90mmx90mm</item>
+        <item>200mmx100mmx100mm</item>
 
-</string-array>
-
-
-
-<string-array name="Cement_Brick">
+    </string-array>
 
 
-<item>190mmx90mmx90mm</item>
-<item>200mmx100mmx100mm</item>
-
-</string-array>
+    <string-array name="Cement_Brick">
 
 
+        <item>190mmx90mmx90mm</item>
+        <item>200mmx100mmx100mm</item>
+
+    </string-array>
 
 
-<string-array name="CLC_Block">
+    <string-array name="CLC_Block">
 
-<item></item>
+        <item></item>
 
-</string-array>
+    </string-array>
 
     <!--Construction Materials end here-->
-    
-    
-    
-    
-    
-    
+
+
     <!--Aluminium Work-->
-    
-    
-    
+
+
     <string-array name="Aluminium_Work">
         <item>Select</item>
-<item>Window</item>
-<item>W_C Doors</item>
-<item>Partition</item>
-</string-array>
-    
+        <item>Window</item>
+        <item>W_C Doors</item>
+        <item>Partition</item>
+    </string-array>
+
     <string-array name="Window">
         <item>Select</item>
-<item>2 Track Window</item>
-<item>3 Track Window</item>
-</string-array>
+        <item>2 Track Window</item>
+        <item>3 Track Window</item>
+    </string-array>
 
-    
-    
-    
+
     <string-array name="W_C_Doors">
 
-<item>None</item>
+        <item>None</item>
 
-</string-array>
-
+    </string-array>
 
 
     <string-array name="Partition">
 
-<item>None</item>
+        <item>None</item>
 
-</string-array>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    </string-array>
+
+
     <!--Aluminium Work end here-->
-    
-    
-    
-    
-    
-    
-    
-    
+
+
     <!--Frabrication-->
-    
-    
+
+
     <string-array name="Frabrication">
         <item>Select</item>
-<item>Main Gate</item>
-<item>Grill</item>
-<item>Channel Gate</item>
-<item>Reling</item>
-<item>Tin Fitting</item>
-<item>Rolling Shutter</item>
-<item>Stair Case</item>
-<item>Shed Fabrication</item>
+        <item>Main Gate</item>
+        <item>Grill</item>
+        <item>Channel Gate</item>
+        <item>Reling</item>
+        <item>Tin Fitting</item>
+        <item>Rolling Shutter</item>
+        <item>Stair Case</item>
+        <item>Shed Fabrication</item>
 
 
-</string-array>
+    </string-array>
 
-    
-    
+
     <!--Frabrication end here-->
-    
-    
-    
-    
+
+
     <!--Steel Work-->
 
     <string-array name="Steel_Work">
@@ -486,292 +438,274 @@
     </string-array>
 
 
-
     <!--Steel Work end here-->
-    
-    
-    
-    
-<!--Plumbing-->
-
-
-
-<string-array name="Plumbing">
-<item>Select</item>
-<item>Astral Pipe</item>
-<item>Finolex</item>
-<item>R C Plasto</item>
-<item>Supreme</item>
-<item>Prince</item>
 
-</string-array>
 
-<string-array name="Type">
-<item>Select</item>
-<item>CPVC</item>
-<item>UPVC</item>
-<item>PVC</item>
+    <!--Plumbing-->
+
+
+    <string-array name="Plumbing">
+        <item>Select</item>
+        <item>Astral Pipe</item>
+        <item>Finolex</item>
+        <item>R C Plasto</item>
+        <item>Supreme</item>
+        <item>Prince</item>
+
+    </string-array>
+
+    <string-array name="Type">
+        <item>Select</item>
+        <item>CPVC</item>
+        <item>UPVC</item>
+        <item>PVC</item>
+
+
+        <item></item>
+
+    </string-array>
+
+
+    <string-array name="Size">
+        <item>Select</item>
+        <item>1_2"</item>
+        <item>3_4"</item>
+        <item>1"</item>
+        <item>1 1_4"</item>
+        <item>1 1_2"</item>
+        <item>2"</item>
+        <item>2 1_2"</item>
+        <item>3"</item>
+        <item>4"</item>
+        <item>3_4"x1_2"</item>
+        <item>1x1_2"</item>
 
+    </string-array>
 
-
-<item></item>
-
-</string-array>
 
+    <string-array name="subtype">
+        <item>Select</item>
+        <item>Coupler</item>
+        <item>Elbow</item>
+        <item>Elbow 45</item>
+        <item>Equal Tee</item>
+        <item>Union</item>
+        <item>Endcap</item>
+        <item>Four way Tee</item>
+        <item>Cross Over</item>
+        <item>Male Threaded Adaptor</item>
+        <item>Female Threaded Adaptor</item>
+        <item>Tank Connector</item>
+        <item>Ball Valves (Union Type)</item>
+        <item>Powder Coated Metal Clamp</item>
+        <item>Reducer</item>
+        <item>Reducing Bush</item>
+        <item>Reducing Tee</item>
+        <item>Reducing MTA</item>
+        <item>Reducing Elbow</item>
+        <item>Transition Bush</item>
+        <item>Reduucer</item>
+        <item>Reducing Bush</item>
+        <item>Reducing Tee</item>
+        <item>Male Threaded Adaptor  </item>
+        <item>Male Threaded Adaptor</item>
+        <item>Female Threaded Adaptor</item>
+        <item>Female Threaded Adaptor</item>
+        <item>Female Threaded Elbow</item>
+        <item>Female Threaded Tee</item>
+    </string-array>
 
-<string-array name="Size">
-<item>Select</item>
-<item>1_2"</item>
-<item>3_4"</item>
-<item>1"</item>
-<item>1 1_4"</item>
-<item>1 1_2"</item>
-<item>2"</item>
-<item>2 1_2"</item>
-<item>3"</item>
-<item>4"</item>
-<item>3_4"x1_2"</item>
-<item>1x1_2"</item>
 
-</string-array>
+    <!--Plumbing end here-->
 
 
-<string-array name="subtype">
-<item>Select</item>
-<item>Coupler</item>
-<item>Elbow</item>
-<item>Elbow 45</item>
-<item>Equal Tee</item>
-<item>Union</item>
-<item>Endcap</item>
-<item>Four way Tee</item>
-<item>Cross Over</item>
-<item>Male Threaded Adaptor</item>
-<item>Female Threaded Adaptor</item>
-<item>Tank Connector</item>
-<item>Ball Valves (Union Type)</item>
-<item>Powder Coated Metal Clamp</item>
-<item>Reducer</item>
-<item>Reducing Bush</item>
-<item>Reducing Tee</item>
-<item>Reducing MTA</item>
-<item>Reducing Elbow</item>
-<item>Transition Bush</item>
-<item>Reduucer</item>
-<item>Reducing Bush</item>
-<item>Reducing Tee</item>
-<item>Male Threaded Adaptor  </item>
-<item>Male Threaded Adaptor</item>
-<item>Female Threaded Adaptor</item>
-<item>Female Threaded Adaptor</item>
-<item>Female Threaded Elbow</item>
-<item>Female Threaded Tee</item>
-</string-array>
+    <!--Paints-->
 
 
+    <string-array name="Asian">
+        <item>Select</item>
 
-<!--Plumbing end here-->
+        <item>Interior</item>
+        <item>Exterior Wall Finishes</item>
+        <item>Distempers</item>
+        <item>Tractor Acrylic Distemper</item>
+        <item>Tractor UNO</item>
+        <item>Acrylic Paints</item>
+        <item>APCO Premium Gloss Enamel</item>
+        <item>APCO Premium Stain Enamel</item>
+        <item>AP Utsav Enamel</item>
+        <item>Gattu G.P.Syn Enamel White</item>
+        <item>Primers</item>
+        <item>Miscelaneous</item>
+        <item>Wood Finishes</item>
+        <item>Putty</item>
+        <item>Adhessive</item>
 
 
-<!--Paints-->
+    </string-array>
 
 
-<string-array name="Asian">
-    <item>Select</item>
+    <string-array name="Interior">
+        <item>Select</item>
+        <item>Royal Matt BR White</item>
+        <item>Royal Shine White</item>
+        <item>Royal Regal White</item>
+        <item>Premium Emulsion White</item>
+        <item>Tractor Shyne White</item>
+        <item>Tractor Emulsion White</item>
+        <item>Apolite Premium Stain Emulsion (Water Base)</item>
+        <item>Int.Wall Finish Lustre Solvent Based White</item>
+        <item>Royal Lustre White</item>
 
-<item>Interior</item>
-<item>Exterior Wall Finishes</item>
-<item>Distempers</item>
-<item>Tractor Acrylic Distemper</item>
-<item>Tractor UNO</item>
-<item>Acrylic Paints</item>
-<item>APCO Premium Gloss Enamel</item>
-<item>APCO Premium Stain Enamel</item>
-<item>AP Utsav Enamel</item>
-<item>Gattu G.P.Syn Enamel White</item>
-<item>Primers</item>
-<item>Miscelaneous</item>
-<item>Wood Finishes</item>
-<item>Putty</item>
-<item>Adhessive</item>
 
+    </string-array>
 
 
+    <string-array name="Exterior_Wall_Finishes">
+        <item>Select</item>
+        <item>Apex Weatherproof Exterior Emulsion Classic White</item>
+        <item>Apex Shyne Weatherproof Exterior Emulsion Classic White</item>
+        <item>Ace Exterior Emulsion White</item>
+        <item>Ace Shine Exterior Emulsion White</item>
+        <item>Ace Exterior Emulsion BR. White</item>
 
 
-</string-array>
+    </string-array>
 
 
+    <string-array name="Distempers">
+        <item>Select</item>
+        <item>Tractor Synthetic Distemper GR-1 White + Cool Cream</item>
+        <item>GR-2  Colours</item>
 
 
-<string-array name="Interior">
-<item>Select</item>
-<item>Royal Matt BR White</item>
-<item>Royal Shine White</item>
-<item>Royal Regal White</item>
-<item>Premium Emulsion White</item>
-<item>Tractor Shyne White</item>
-<item>Tractor Emulsion White</item>
-<item>Apolite Premium Stain Emulsion (Water Base)</item>
-<item>Int.Wall Finish Lustre Solvent Based White</item>
-<item>Royal Lustre White</item>
+    </string-array>
 
 
-</string-array>
+    <string-array name="Tractor_Acrylic_Distemper">
+        <item>Select</item>
+        <item>Snow White</item>
 
+        <item>GR-11 Pista + Candy</item>
+    </string-array>
 
-<string-array name="Exterior_Wall_Finishes">
-<item>Select</item>
-<item>Apex Weatherproof Exterior Emulsion Classic White</item>
-<item>Apex Shyne Weatherproof Exterior Emulsion Classic White</item>
-<item>Ace Exterior Emulsion White</item>
-<item>Ace Shine Exterior Emulsion White</item>
-<item>Ace Exterior Emulsion BR. White</item>
 
+    <string-array name="Tractor_UNO">
+        <item>Select</item>
+        <item>UNO BR White</item>
+        <item>GR-9 Colours</item>
 
+    </string-array>
 
-</string-array>
 
+    <string-array name="Acrylic_Paints">
+        <item>Select</item>
+        <item>Aqua Lock Xtra White</item>
 
-<string-array name="Distempers">
-<item>Select</item>
-<item>Tractor Synthetic Distemper GR-1 White + Cool Cream</item>
-<item>GR-2  Colours</item>
+    </string-array>
 
+    <string-array name="APCO_Premium_Gloss_Enamel">
+        <item>Select</item>
+        <item>BR White</item>
+        <item>Group-1</item>
+        <item>Group-0</item>
+        <item>Gold_Silver</item>
+    </string-array>
 
+    <string-array name="APCO_Premium_Stain_Enamel">
+        <item>Select</item>
+        <item>White</item>
+        <item>Group-2 Colour</item>
 
-</string-array>
+    </string-array>
 
+    <string-array name="AP_Utsav_Enamel">
+        <item>Select</item>
+        <item>White+Group-1</item>
+        <item>Group-6</item>
+    </string-array>
 
-<string-array name="Tractor_Acrylic_Distemper">
-<item>Select</item>
-<item>Snow White</item>
+    <string-array name="Gattu_G_P_Syn_Enamel_White">
+        <item>Select</item>
+        <item>Gattu</item>
 
-<item>GR-11 Pista + Candy</item>
-</string-array>
+    </string-array>
 
+    <string-array name="Primers">
+        <item>Select</item>
+        <item>Wood Primer Pink</item>
+        <item>Wood Primer White</item>
+        <item>Tractor Oil Primer</item>
+        <item>AP Decoprimer Metal Primer</item>
+        <item>Smart Care High Performance Metal Primer</item>
+        <item>Deco. Wall Primer ST</item>
+        <item>Deco. Wall Primer WT</item>
+        <item>DCP Advanced Primer -WT White</item>
+        <item>Exterior Wall Primer </item>
+        <item>Advance Exterior Wall Primer </item>
+        <item>APCO Primer Surfacer</item>
+    </string-array>
 
+    <string-array name="Miscelaneous">
+        <item>Select</item>
+        <item>AP Clear Varnish</item>
+        <item>3 MGS Aluminium PT</item>
+        <item>3 MGS Black Board PT</item>
+        <item>APCO K P Filler</item>
+        <item></item>
 
-<string-array name="Tractor_UNO">
-<item>Select</item>
-<item>UNO BR White</item>
-<item>GR-9 Colours</item>
+    </string-array>
 
-</string-array>
+    <string-array name="Wood_Finishes">
+        <item>Select</item>
+        <item>Melamyne Matt</item>
+        <item>Melamyne Glossy</item>
+        <item>Melamyne Silver</item>
+        <item>Touch Wood Glossy</item>
 
+    </string-array>
 
-<string-array name="Acrylic_Paints">
-<item>Select</item>
-<item>Aqua Lock Xtra White</item>
+    <string-array name="Putty">
+        <item>Select</item>
+        <item>Asian Aryalic Wall Putty</item>
+        <item>Exterior Wall Putty</item>
+        <item>Asian Filling Putty </item>
+        <item>Marvello Plast Putty</item>
+    </string-array>
 
-</string-array>
+    <string-array name="Adhessive">
+        <item>Select</item>
+        <item>Smart Care Normal Tile Addhesive</item>
+        <item>Smart Carel Tile on Tile Addhesive</item>
+        <item>Smart Care Glass Tile Addhesive</item>
 
-<string-array name="APCO_Premium_Gloss_Enamel">
-<item>Select</item>
-<item>BR White</item>
-<item>Group-1</item>
-<item>Group-0</item>
-<item>Gold_Silver</item>
-</string-array>
+    </string-array>
 
-<string-array name="APCO_Premium_Stain_Enamel">
-<item>Select</item>
-<item>White</item>
-<item>Group-2 Colour</item>
 
-</string-array>
+    <string-array name="liter">
+        <item>Select</item>
+        <item>20 Liter</item>
+        <item>10 Liter</item>
+        <item>4 Liter</item>
+        <item>1 Liter</item>
+        <item>500 Ml</item>
 
-<string-array name="AP_Utsav_Enamel">
-<item>Select</item>
-<item>White+Group-1</item>
-<item>Group-6</item>
-</string-array>
+    </string-array>
 
-<string-array name="Gattu_G_P_Syn_Enamel_White">
-<item>Select</item>
-<item>Gattu</item>
 
-</string-array>
-
-<string-array name="Primers">
-<item>Select</item>
-<item>Wood Primer Pink</item>
-<item>Wood Primer White</item>
-<item>Tractor Oil Primer</item>
-<item>AP Decoprimer Metal Primer</item>
-<item>Smart Care High Performance Metal Primer</item>
-<item>Deco. Wall Primer ST</item>
-<item>Deco. Wall Primer WT</item>
-<item>DCP Advanced Primer -WT White</item>
-<item>Exterior Wall Primer </item>
-<item>Advance Exterior Wall Primer </item>
-<item>APCO Primer Surfacer</item>
-</string-array>
-
-<string-array name="Miscelaneous">
-<item>Select</item>
-<item>AP Clear Varnish</item>
-<item>3 MGS Aluminium PT</item>
-<item>3 MGS Black Board PT</item>
-<item>APCO K P Filler</item>
-<item></item>
-
-</string-array>
-
-<string-array name="Wood_Finishes">
-<item>Select</item>
-<item>Melamyne Matt</item>
-<item>Melamyne Glossy</item>
-<item>Melamyne Silver</item>
-<item>Touch Wood Glossy</item>
-
-</string-array>
-
-<string-array name="Putty">
-<item>Select</item>
-<item>Asian Aryalic Wall Putty</item>
-<item>Exterior Wall Putty</item>
-<item>Asian Filling Putty </item>
-<item>Marvello Plast Putty</item>
-</string-array>
-
-<string-array name="Adhessive">
-<item>Select</item>
-<item>Smart Care Normal Tile Addhesive</item>
-<item>Smart Carel Tile on Tile Addhesive</item>
-<item>Smart Care Glass Tile Addhesive</item>
-
-</string-array>
-
-
-
-<string-array name="liter">
-<item>Select</item>
-<item>20 Liter</item>
-<item>10 Liter</item>
-<item>4 Liter</item>
-<item>1 Liter</item>
-<item>500 Ml</item>
-
-</string-array>
-
-
-<string-array name="kg">
-<item>Select</item>
-<item>20 Kg</item>
-<item>10 Kg</item>
-<item>5 Kg</item>
-<item>2 Kg</item>
-<item>1 Kg</item>
-<item>30 Kg</item>
-</string-array>
-<!--Paints end here-->
-
+    <string-array name="kg">
+        <item>Select</item>
+        <item>20 Kg</item>
+        <item>10 Kg</item>
+        <item>5 Kg</item>
+        <item>2 Kg</item>
+        <item>1 Kg</item>
+        <item>30 Kg</item>
+    </string-array>
+    <!--Paints end here-->
 
 
     <!--Ready made furniture-->
-
-
 
 
     <string-array name="Ready_Made_Furniture">
@@ -790,22 +724,20 @@
 
     </string-array>
 
-<string-array name="Bed">
+    <string-array name="Bed">
 
-    <item>Single Bed</item>
-    <item>Small Double Bed</item>
-    <item>Double Bed</item>
-    <item>Queen Size</item>
-    <item>King Size</item>
-    <item>Divan Bed</item>
-    <item>Cabin Bed</item>
-    <item></item>
-    <item></item>
-    <item></item>
+        <item>Single Bed</item>
+        <item>Small Double Bed</item>
+        <item>Double Bed</item>
+        <item>Queen Size</item>
+        <item>King Size</item>
+        <item>Divan Bed</item>
+        <item>Cabin Bed</item>
+        <item></item>
+        <item></item>
+        <item></item>
 
-</string-array>
-
-
+    </string-array>
 
 
     <string-array name="Sofa">
@@ -869,7 +801,7 @@
         <item>Asian</item>
         <!--<item>Dulex</item>-->
         <!--<item>Burger</item>-->
-<!---->
+        <!---->
     </string-array>
 
 
@@ -937,14 +869,14 @@
 
     </string-array>
 
-<string-array name="Plywood">
-    <item>Kitply</item>
-    <item>Royal Touch</item>
-    <item>Fab</item>
-    <item>Green ply</item>
-    <item>Nuroply</item>
+    <string-array name="Plywood">
+        <item>Kitply</item>
+        <item>Royal Touch</item>
+        <item>Fab</item>
+        <item>Green ply</item>
+        <item>Nuroply</item>
 
-</string-array>
+    </string-array>
 
 
 </resources>
