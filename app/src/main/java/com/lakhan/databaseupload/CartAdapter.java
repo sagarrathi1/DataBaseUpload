@@ -61,7 +61,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
         this.context = context;
         this.databasePojos = databasePojos;
-        this.Cartitem = (CartAdapterLisnter) context;
+//        this.Cartitem = (CartAdapterLisnter) context;
         this.ispaymentPage = bool;
 
 
@@ -110,21 +110,21 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
 
 
 
-        viewHolder.quantity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
-                if (databasePojos.size()!=0)
-                Cartitem.onCartItemClick(databasePojos.get(i),position+1);
-//                Toast.makeText(context,""+position + i + databasePojos.size(),Toast.LENGTH_LONG).show();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+//        viewHolder.quantity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+//
+//                if (databasePojos.size()!=0)
+//                Cartitem.onCartItemClick(databasePojos.get(i),position+1);
+////                Toast.makeText(context,""+position + i + databasePojos.size(),Toast.LENGTH_LONG).show();
+//
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
 //
 //
 //        viewHolder.quantity.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -151,8 +151,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder> 
         });
 
 
-        current_user = FirebaseAuth.getInstance().getCurrentUser();
-        uid = current_user.getUid();
+//        current_u/ser = FirebaseAuth.getInstance().getCurrentUser();
+//        uid = current_user.getUid();
 
 
         viewHolder.wishlist.setOnClickListener(new View.OnClickListener() {

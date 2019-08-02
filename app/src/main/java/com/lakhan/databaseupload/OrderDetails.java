@@ -1,16 +1,14 @@
 package com.lakhan.databaseupload;
 
-
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -28,13 +26,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class PaymentFragment extends Fragment {
-
-
+public class OrderDetails extends AppCompatActivity {
     View view;
 
     private FirebaseAuth mAuth;
@@ -58,29 +50,24 @@ public class PaymentFragment extends Fragment {
     TextView address_Name,addressDefault,address_addressText,address_address1Text,address_cityText,Address_stateText,Address_mobileText;
     private RadioButton radioButton;
     Context context;
-//    private Button placeOrderButton;
+    String id;
+    //    private Button placeOrderButton;
 //    TextView originalprice,discountPriceText,Percent;
-
-//    PaymentFragmentListner callMain;
-
-
-    public PaymentFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        view =  inflater.inflate(R.layout.fragment_payment, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_order_details);
+
+
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
+        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
         mAuth = FirebaseAuth.getInstance();
         mydata = FirebaseDatabase.getInstance();
         mStorageRef = FirebaseStorage.getInstance().getReference();
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this.getActivity(),1);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
-        customAdapter = new CartAdapter(this.getActivity(), this.databasePojos,2);
+        customAdapter = new CartAdapter(this, this.databasePojos,2);
         recyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
 //        this.callMain = (PaymentFragmentListner) getActivity();
 
@@ -102,12 +89,12 @@ public class PaymentFragment extends Fragment {
 //                    nowishlist.setVisibility(View.GONE);
 //                    recyclerView.setVisibility(View.VISIBLE);
 
-                getMyref = FirebaseDatabase.getInstance().getReference().child("OrderId").child("").child("CartItems");
+                getMyref = FirebaseDatabase.getInstance().getReference().child("OrderId").child(id).child("CartItems");
                 getMyref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        if (dataSnapshot.hasChild("Item_Product")) {
+//                        if (dataSnapshot.hasChild("Item_Product")) {
                             for (DataSnapshot messageSnapshot : dataSnapshot.getChildren()) {
                                 final String name = (String) messageSnapshot.getKey();
 //                                cartCountText.setText("Item(" + dataSnapshot.getChildrenCount() + ")");
@@ -142,7 +129,7 @@ public class PaymentFragment extends Fragment {
 
 
                             }
-                        }
+//                        }
                     }
 
                     @Override
@@ -174,13 +161,13 @@ public class PaymentFragment extends Fragment {
             }
         });
 
-        address_Name = (TextView)view.findViewById(R.id.address_Name);
-        address_addressText = (TextView)view.findViewById(R.id.address_addressText);
-        address_address1Text = (TextView)view.findViewById(R.id.address_address1Text);
-        address_cityText = (TextView)view.findViewById(R.id.address_cityText);
-        Address_stateText = (TextView)view.findViewById(R.id.Address_stateText);
-        Address_mobileText = (TextView)view.findViewById(R.id.Address_mobileText);
-        addressRef = FirebaseDatabase.getInstance().getReference().child("OrderId").child("").child("CartAddress");
+        address_Name = (TextView)findViewById(R.id.address_Name);
+        address_addressText = (TextView)findViewById(R.id.address_addressText);
+        address_address1Text = (TextView)findViewById(R.id.address_address1Text);
+        address_cityText = (TextView)findViewById(R.id.address_cityText);
+        Address_stateText = (TextView)findViewById(R.id.Address_stateText);
+        Address_mobileText = (TextView)findViewById(R.id.Address_mobileText);
+        addressRef = FirebaseDatabase.getInstance().getReference().child("OrderId").child(id).child("CartAddress");
         addressRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -212,14 +199,14 @@ public class PaymentFragment extends Fragment {
         });
 
 
-//        discountPriceText = (TextView)view.findViewById(R.id.cardDiscountPrice);
-//        originalprice = (TextView)view.findViewById(R.id.cardOriginalPrice);
-//        Percent = (TextView)view.findViewById(R.id.cardDiscountPercent);
+//        discountPriceText = (TextView)findViewById(R.id.cardDiscountPrice);
+//        originalprice = (TextView)findViewById(R.id.cardOriginalPrice);
+//        Percent = (TextView)findViewById(R.id.cardDiscountPercent);
 
-        totalPriceText = (TextView)view.findViewById(R.id.TotalText);
-        originalPriceText = (TextView)view.findViewById(R.id.TotalMRPText);
-        discountPriceText = (TextView)view.findViewById(R.id.TotalDiscountText);
-        priceReg = FirebaseDatabase.getInstance().getReference().child("OrderId").child("").child("CartPrice");
+        totalPriceText = (TextView)findViewById(R.id.TotalText);
+        originalPriceText = (TextView)findViewById(R.id.TotalMRPText);
+        discountPriceText = (TextView)findViewById(R.id.TotalDiscountText);
+        priceReg = FirebaseDatabase.getInstance().getReference().child("OrderId").child(id).child("CartPrice");
         priceReg.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -250,25 +237,24 @@ public class PaymentFragment extends Fragment {
         });
 
 
-        radioButton = (RadioButton)view.findViewById(R.id.radioButtonCashOnDelivery);
-        placeOrderButton = (Button)view.findViewById(R.id.PlaceOrderButton);
-        placeOrderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!radioButton.isChecked()){
+        radioButton = (RadioButton)findViewById(R.id.radioButtonCashOnDelivery);
+//        placeOrderButton = (Button)findViewById(R.id.PlaceOrderButton);
+//        placeOrderButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (!radioButton.isChecked()){
+//
+//                    Toast.makeText(context,"Please select payment option at bottom",Toast.LENGTH_LONG).show();
+//                }else {
+//
+////                    callMain.PaymentFragmentListner();
+//
+////                    Random rnd = new Random();
+////                    int number = rnd.nextInt(999999);
+//                }
+//            }
+//        });
 
-                    Toast.makeText(context,"Please select payment option at bottom",Toast.LENGTH_LONG).show();
-                }else {
 
-//                    callMain.PaymentFragmentListner();
-
-//                    Random rnd = new Random();
-//                    int number = rnd.nextInt(999999);
-                }
-            }
-        });
-        return view;
     }
-    }
-
-
+}

@@ -4,6 +4,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,7 +48,6 @@ public class Order extends AppCompatActivity {
         mImageStorage = FirebaseStorage.getInstance().getReference();
 
         listView = (ListView)findViewById(R.id.myListView);
-        arrayList.add("Lakhan");
 
 
         arrayadapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
@@ -62,6 +63,22 @@ public class Order extends AppCompatActivity {
 //                startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE_REQUEST);
 
                 name = arrayList.get(position);
+                Intent intent = new Intent(getApplicationContext(),OrderDetails.class);
+                intent.putExtra("id",name);
+                startActivity(intent);
+
+
+
+//                PaymentFragment serviceProvideFragment = new PaymentFragment(getApplicationContext());
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction ft = fragmentManager.beginTransaction();
+//                ft.addToBackStack("PaymentPage");
+////                args.putString("Main",expandableListTitle.get(groupPosition));
+////                serviceProvideFragment.setArguments(args);
+////            fragmentManager.popBackStack();
+//                ft.replace(R.id.content_frame, serviceProvideFragment, "ourservicescategory")
+//                        .addToBackStack(null)
+//                        .commit();
 //                CropImage.activity()
 //                        .setGuidelines(CropImageView.Guidelines.ON)
 //                        .start(MainActivity.this);
