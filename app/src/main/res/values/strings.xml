@@ -4,7 +4,6 @@
     <string-array name="main">
         <item>Select</item>
         <item>Interior Material</item>
-        <!--<item>Our services</item>-->
         <item>Ready Made Furniture</item>
         <item>Contruction Material</item>
         <item>Aluminium Work</item>
@@ -12,7 +11,38 @@
         <item>Electric</item>
         <item>Plumbing</item>
         <item>Paints</item>
+        <item>Equipment On Rent</item>
 
+
+    </string-array>
+
+    <string-array name="EquipmentOnRent">
+        <item>Select</item>
+        <item>JCB</item>
+        <item>Pockland</item>
+        <item>Mixture</item>
+        <item>Vibrator</item>
+        <item>Bracker</item>
+        <item>Cutter</item>
+        <item>Drill</item>
+        <item>Grinder</item>
+        <item>Compaction Machine</item>
+        <item>Roller</item>
+        <item>Putti Mixing Machine</item>
+        <item>Centering</item>
+        <item>Ladder (Ghodi)</item>
+        <item>Chalni</item>
+        <item>Ghamela</item>
+        <item>Ladder (Sidi)</item>
+        <item>Shovels (Favda)</item>
+        <item>Hammer</item>
+        <item>Panja</item>
+        <item>Dhumas</item>
+        <item>Chali</item>
+        <item>Pickxe (Tikas)</item>
+        <item>Palak</item>
+
+        <!--<item>Mica</item>-->
 
     </string-array>
 

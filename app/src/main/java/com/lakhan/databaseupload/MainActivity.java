@@ -1428,6 +1428,39 @@ ProgressDialog pd;
 
 
 
+                }else if (i==9){
+
+                    ArrayAdapter<CharSequence> sunAd = ArrayAdapter.createFromResource(getApplicationContext(),
+                            R.array.EquipmentOnRent,R.layout.spinner_item);
+
+                    sunAd.setDropDownViewResource(R.layout.spinner_dropdown);
+                    sub.setAdapter(sunAd);
+
+                    sub.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+
+
+                            ArrayAdapter<CharSequence> brandad = ArrayAdapter.createFromResource(getApplicationContext(),
+                                    R.array.None,R.layout.spinner_item);
+
+                            brandad.setDropDownViewResource(R.layout.spinner_dropdown);
+                            brand.setAdapter(brandad);
+
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> adapterView) {
+
+                        }
+                    });
+
+
+
+
+
+
                 }
 
             }
